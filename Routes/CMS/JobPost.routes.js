@@ -17,9 +17,9 @@ router.get("/stats", checkPermission("jobpost:view"), getJobPostStats);
 
 router.post("/", checkPermission("jobpost:create"), createJobPost);
 
-router.get("/", checkPermission("jobpost:view"), getAllJobPosts);
+router.get("/", getAllJobPosts);
 
-router.get("/:id", checkPermission("jobpost:view"), getJobPostById);
+router.get("/:id",  getJobPostById);
 
 router.put("/:id", checkPermission("jobpost:update"), updateJobPost);
 router.patch(
